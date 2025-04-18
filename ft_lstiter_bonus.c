@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 09:17:10 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/17 09:48:03 by jmora-ro         ###   ########.fr       */
+/*   Created: 2025/04/18 17:56:20 by jmora-ro          #+#    #+#             */
+/*   Updated: 2025/04/18 18:02:53 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// typedef struct s_list
-// {
-// 	void			*content;
-// 	struct s_list	*next;
-// }					t_list;
-
-
-t_list	*ft_lstnew(void *content)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*list;
-
-	list = (t_list *)malloc(sizeof(t_list));
-	if (!list)
-		return (NULL);
-	list -> content = content;
-	list -> next = NULL;
-	return (list);
-}
-
-int	main(void)
-{
-	int	n = 42;
-	t_list *test = ft_lstnew(n);
-	printf("El numero es: %d", *test);
-	return (0);
+	if (!lst)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }

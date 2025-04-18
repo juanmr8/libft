@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 17:19:13 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/18 15:53:21 by jmora-ro         ###   ########.fr       */
+/*   Created: 2025/04/18 16:42:17 by jmora-ro          #+#    #+#             */
+/*   Updated: 2025/04/18 17:41:58 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+/*void	*del(void *content)
 {
-	unsigned char	*ptr;
-	size_t			total_size;
+	free(content);
+}*/
+void	ft_lstdelone(t_list *lst, void (*del)(void
+*))
+{
 
-	if (nmemb == 0 || size == 0)
+	if (lst)
 	{
-		ptr = malloc(1);
-		ft_bzero(ptr, 1);
-		return (ptr);
+		del(lst->content);
+		free(lst);
 	}
-	total_size = nmemb * size;
-	ptr = malloc(total_size);
-	if (!ptr)
-		return (NULL);
-	ft_bzero(ptr, total_size);
 
 }
-

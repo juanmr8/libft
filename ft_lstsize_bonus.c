@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 12:29:53 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/17 12:55:17 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:57:55 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <stdio.h>
 int	ft_lstsize(t_list *lst)
 {
 	int	size;
@@ -24,7 +24,7 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (size);
 }
-/*int	main(void)
+int	main(void)
 {
 	t_list	*list_1 = ft_lstnew("Holis 1");
 	t_list	*list_2 = ft_lstnew("Holis 2");
@@ -38,4 +38,4 @@ int	ft_lstsize(t_list *lst)
 	int	list_size = ft_lstsize(list_1);
 	printf("Tamaño de la lista %d\n", list_size);
 	return (0);
-}*/
+}

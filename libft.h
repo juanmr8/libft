@@ -6,7 +6,7 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 17:49:49 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/17 13:04:20 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:15:31 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+#include <stdio.h>
 
 /* Part 1 - Libc functions */
 int		ft_isalpha(int c);
@@ -58,7 +59,6 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-	struct s_list	*prev;
 }					t_list;
 
 /* Part 3 - Bonus */
