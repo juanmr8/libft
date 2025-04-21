@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 16:21:00 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/18 16:37:52 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/18 18:39:17 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	while (temp -> next != NULL)
-		temp = temp -> next;
-	temp -> next = new;
+	while (temp->next != NULL)
+		temp = temp->next;
+	temp->next = new;
 }
 
 /*int main(void)

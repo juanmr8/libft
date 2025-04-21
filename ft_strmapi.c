@@ -6,7 +6,7 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:59:49 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/16 12:59:57 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/20 11:32:30 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	if (!*s)
-		return (NULL);
 	i = 0;
-	str = (char *)malloc(ft_strlen(s) * sizeof(char));
+	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	while (s[i])

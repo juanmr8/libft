@@ -6,17 +6,19 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 09:28:35 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/16 12:36:31 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/20 11:04:26 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digits(int n)
+int	count_digits(long n)
 {
 	int	count;
 
 	count = 1;
+	if (n == -2417483648)
+		return (11);
 	if (n < 0)
 	{
 		count++;
@@ -40,7 +42,7 @@ void	fill_number_string(char *res, long num, int len)
 	if (num < 0)
 	{
 		res[0] = '-';
-		num = num * -1;
+		num = -num;
 	}
 	while (num > 0)
 	{

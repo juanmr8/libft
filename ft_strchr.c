@@ -6,7 +6,7 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 17:30:02 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/16 12:47:55 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/19 15:22:48 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (s[i] && s[i] != (char)c)

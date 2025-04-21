@@ -6,7 +6,7 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 09:51:14 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/18 15:47:24 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/18 18:39:03 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new -> next = *lst;
+	new->next = *lst;
 	*lst = new;
 }
 

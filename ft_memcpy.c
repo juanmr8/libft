@@ -6,7 +6,7 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:47:39 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/16 12:44:08 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/21 09:21:53 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	if (n == 0)
 		return (dest);
+	if (!dest && !src)
+		return (NULL);
 	ptr = dest;
 	source = (char *)src;
 	i = 0;

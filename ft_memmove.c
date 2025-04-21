@@ -6,39 +6,45 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 16:46:08 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/17 12:32:22 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/20 11:25:24 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+void	ft_iterate_pos(char	*dest, char *src, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (n--)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+}
+
+void	ft_iterate_neg(char	*dest, char *src, size_t n)
+{
+	while (n > 0)
+	{
+		n--;
+		dest[n] = src[n];
+	}
+}
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*destino;
 	char	*source;
-	size_t	i;
 
 	destino = (char *)dest;
 	source = (char *)src;
-	if (!src || !dest)
-		return (NULL);
+	if (src == dest)
+		return (dest);
 	if (destino < source)
-	{
-		i = 0;
-		while (i < n)
-		{
-			destino[i] = source[i];
-			i++;
-		}
-	}
+		ft_iterate_pos(destino, source, n);
 	else if (destino > source)
-	{
-		i = n - 1;
-		while (i > 0)
-		{
-			destino[i] = source[i];
-			i--;
-		}
-	}
+		ft_iterate_neg(destino, source, n);
 	return (dest);
 }
