@@ -6,7 +6,7 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 12:31:45 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/16 12:25:48 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/21 13:36:47 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	inside_word;
 	int	i;
@@ -37,7 +37,7 @@ int	count_words(char const *s, char c)
 	return (word_count);
 }
 
-size_t	modified_ft_strlen(const char *s, char c, int start)
+static size_t	modified_ft_strlen(const char *s, char c, int start)
 {
 	size_t	len;
 
@@ -47,7 +47,7 @@ size_t	modified_ft_strlen(const char *s, char c, int start)
 	return (len);
 }
 
-int	fill_array(char **arr, char const *s, char c, int *j)
+static int	fill_array(char **arr, char const *s, char c, int *j)
 {
 	int	i;
 	int	inside_word;
@@ -75,7 +75,7 @@ int	fill_array(char **arr, char const *s, char c, int *j)
 	return (0);
 }
 
-void	free_array(char **arr)
+static void	free_array(char **arr)
 {
 	int	i;
 

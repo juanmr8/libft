@@ -6,13 +6,13 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 12:17:45 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/16 12:50:08 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/21 13:38:35 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	match(const char *set, const char c)
+static int	match(const char *set, const char c)
 {
 	int	i;
 

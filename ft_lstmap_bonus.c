@@ -6,7 +6,7 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:04:50 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/21 10:25:13 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/21 12:50:45 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void (*del)(void *))
 		new_node = ft_lstnew(content);
 		if (!new_node)
 		{
-			free(content);
+			del(content);
 			ft_lstclear(&final_list, del);
 			return (NULL);
 		}

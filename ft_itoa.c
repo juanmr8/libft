@@ -6,13 +6,13 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 09:28:35 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/20 11:04:26 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/21 13:34:36 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digits(long n)
+static int	count_digits(long n)
 {
 	int	count;
 
@@ -32,7 +32,7 @@ int	count_digits(long n)
 	return (count);
 }
 
-void	fill_number_string(char *res, long num, int len)
+static void	fill_number_string(char *res, long num, int len)
 {
 	int	i;
 
