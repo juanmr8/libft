@@ -1,7 +1,4 @@
-LIB = ar rcs
-RM = rm -f
-
-CC = gcc
+CC = cc
 CCFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
@@ -57,19 +54,19 @@ BONUSOBJ = $(BONUSSRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 bonus: $(OBJ) $(BONUSOBJ) $(INCLUDE)
-	$(LIB) $(NAME) $(BONUSOBJ) $(OBJ)
+	ar rcs $(NAME) $(BONUSOBJ) $(OBJ)
 
 %.o: %.c
 	$(CC) $(CCFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) $(OBJ) $(BONUSOBJ)
+	rm -f $(OBJ) $(BONUSOBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
