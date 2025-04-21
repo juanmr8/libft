@@ -6,7 +6,7 @@
 /*   By: jmora-ro <jmora-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 17:49:49 by jmora-ro          #+#    #+#             */
-/*   Updated: 2025/04/19 15:45:59 by jmora-ro         ###   ########.fr       */
+/*   Updated: 2025/04/21 10:55:40 by jmora-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <limits.h>
 
 /* Part 1 - Libc functions */
 int		ft_isalpha(int c);
